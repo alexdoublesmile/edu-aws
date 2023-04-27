@@ -18,6 +18,7 @@
 
     <properties>
         <java.version>11</java.version>
+        <dynamodb.version>1.12.429</dynamodb.version>
     </properties>
 
     <dependencies>
@@ -32,7 +33,7 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-dynamodb</artifactId>
-            <version>1.12.429</version>
+            <version>${dynamodb.version}</version>
         </dependency>
     </dependencies>
 

@@ -14,4 +14,8 @@ public class PersonRepository {
         mapper.save(person);
         return person;
     }
+
+    public Person findById(String id) {
+        return mapper.load(Person.class, id);
+    }
 }

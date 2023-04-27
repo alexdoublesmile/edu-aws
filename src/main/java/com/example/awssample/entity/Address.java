@@ -16,8 +16,10 @@ public class Address implements Serializable {
 
     @DynamoDBAttribute
     private Long code;
+
     @DynamoDBAttribute
     private String city;
+    
     @DynamoDBAttribute
     private String state;
 }

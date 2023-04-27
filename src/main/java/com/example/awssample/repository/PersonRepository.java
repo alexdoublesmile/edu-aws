@@ -18,4 +18,9 @@ public class PersonRepository {
     public Person findById(String id) {
         return mapper.load(Person.class, id);
     }
+
+    public String delete(String id) {
+        mapper.delete(id);
+        return "Person removed";
+    }
 }

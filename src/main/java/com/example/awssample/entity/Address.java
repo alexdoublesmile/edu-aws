@@ -19,7 +19,7 @@ public class Address implements Serializable {
 
     @DynamoDBAttribute
     private String city;
-    
+
     @DynamoDBAttribute
     private String state;
 }

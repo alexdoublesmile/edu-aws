@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @DynamoDBDocument
 public class Address implements Serializable {
-    
+
     @DynamoDBAttribute
     private Long code;
     @DynamoDBAttribute

@@ -8,4 +8,5 @@ public class Person implements Serializable {
     private String name;
     private String email;
     private Integer age;
+    private Address address;
 }

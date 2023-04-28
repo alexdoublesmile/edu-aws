@@ -23,4 +23,9 @@ public class PersonRepository {
         mapper.delete(id);
         return "Person removed";
     }
+
+    public String update(Person person) {
+        mapper.save(person, buildExpresion(person));
+        return "Person updated";
+    }
 }

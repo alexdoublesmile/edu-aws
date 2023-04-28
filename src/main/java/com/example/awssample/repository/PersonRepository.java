@@ -1,9 +1,14 @@
 package com.example.awssample.repository;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBSaveExpression;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.amazonaws.services.dynamodbv2.model.ExpectedAttributeValue;
 import com.example.awssample.entity.Person;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+
+import java.util.HashMap;
 
 @Repository
 @RequiredArgsConstructor
@@ -27,5 +32,16 @@ public class PersonRepository {
     public String update(Person person) {
         mapper.save(person, buildExpresion(person));
         return "Person updated";
+    }
+
+    private DynamoDBSaveExpression buildExpresion(Person person) {
+        final DynamoDBSaveExpression expression = new DynamoDBSaveExpression();
+        final HashMap<String, ExpectedAttributeValue> expectedAttributesMap = new HashMap<>();
+        expectedAttributesMap.put("personId", new ExpectedAttributeValue(
+                new AttributeValue().withS(person.getId())
+        ));
+        expression.setExpected(expectedAttributesMap);
+
+        return expression;
     }
 }

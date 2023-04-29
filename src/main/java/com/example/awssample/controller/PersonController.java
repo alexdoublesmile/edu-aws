@@ -18,4 +18,9 @@ public class PersonController {
     public Person save(Person person) {
         return personService.add(person);
     }
+
+    @PostMapping
+    public Person findById(String id) {
+        return personService.findById(id);
+    }
 }

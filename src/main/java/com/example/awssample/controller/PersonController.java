@@ -28,4 +28,9 @@ public class PersonController {
     public Person delete(String id) {
         return personService.delete(id);
     }
+
+    @PostMapping
+    public Person update(Person person) {
+        return personService.update(person);
+    }
 }

@@ -23,4 +23,9 @@ public class PersonController {
     public Person findById(String id) {
         return personService.findById(id);
     }
+
+    @PostMapping
+    public Person delete(String id) {
+        return personService.delete(id);
+    }
 }

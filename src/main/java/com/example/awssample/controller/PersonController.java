@@ -13,22 +13,22 @@ public class PersonController {
     private final PersonService personService;
 
     @PostMapping
-    public Person save(Person person) {
+    public Person save(@RequestBody Person person) {
         return personService.add(person);
     }
 
-    @GetMapping
-    public Person findById(String id) {
+    @GetMapping("/{id}")
+    public Person findById(@PathVariable String id) {
         return personService.findById(id);
     }
 
-    @DeleteMapping
-    public Person delete(String id) {
+    @DeleteMapping("/{id}")
+    public Person delete(@PathVariable String id) {
         return personService.delete(id);
     }
 
     @PutMapping
-    public Person update(Person person) {
+    public Person update(@RequestBody Person person) {
         return personService.update(person);
     }
 }

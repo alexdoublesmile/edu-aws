@@ -16,7 +16,7 @@ public class PersonService {
     }
 
     public Person findById(String id) {
-        return null;
+        return personRepository.findById(id);
     }
 
     public Person delete(String id) {

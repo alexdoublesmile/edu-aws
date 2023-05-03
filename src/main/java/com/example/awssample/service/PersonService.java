@@ -12,7 +12,7 @@ public class PersonService {
     private final PersonRepository personRepository;
 
     public Person add(Person person) {
-        return null;
+        return personRepository.addPerson(person);
     }
 
     public Person findById(String id) {

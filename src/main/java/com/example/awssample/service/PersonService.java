@@ -23,7 +23,7 @@ public class PersonService {
         return personRepository.delete(id);
     }
 
-    public Person update(Person person) {
-        return null;
+    public String update(Person person) {
+        return personRepository.update(person);
     }
 }

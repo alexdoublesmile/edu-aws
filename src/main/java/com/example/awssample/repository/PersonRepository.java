@@ -6,10 +6,12 @@ import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.dynamodbv2.model.ExpectedAttributeValue;
 import com.example.awssample.entity.Person;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 
+@Log4j2
 @Repository
 @RequiredArgsConstructor
 public class PersonRepository {

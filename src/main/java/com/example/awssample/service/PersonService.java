@@ -3,8 +3,10 @@ package com.example.awssample.service;
 import com.example.awssample.entity.Person;
 import com.example.awssample.repository.PersonRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
+@Log4j2
 @Service
 @RequiredArgsConstructor
 public class PersonService {
